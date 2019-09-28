@@ -44,11 +44,11 @@ body>div {
     border-left: 3px dotted white;
     border-right: 3px dotted white;
 }
-#container{
+#animacao {
     animation: 2s levareContainer ease-out;
     z-index: 0;
 }
-#container div {
+#animacao div {
    height: 13vh;
    width: 13vh;
    border-radius: 50%;

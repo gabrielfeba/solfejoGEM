@@ -2,9 +2,8 @@ const compassos = document.querySelectorAll(".compassos");
 const bpm = document.querySelector("input[type='number']");
 const iniciar = document.querySelector("section button");
 const section = document.querySelector("section");
-const container = document.querySelector("#container");
-const containerDiv = document.querySelector("#container div");
-const divDoSolfejo = document.querySelector("body>div");
+const animacaoDiv = document.querySelector("#animacao div");
+const containerDoSolfejo = document.querySelector("body>.containerDasLinhas");
 const linhaDesenho = document.querySelectorAll(".linhaDesenho");
 const corpoDaPagina = document.querySelector("body");
 
@@ -51,9 +50,9 @@ function comecarAnimacao(tipoDeCompasso) {
     // retira o display do menu.
     section.style.display = "none";
     // coloca div do solfejo.
-    divDoSolfejo.style.display = "flex";
+    containerDoSolfejo.style.display = "flex";
     // adiciona animação com a velocidade da batida e o tipo de solfejo.
-    containerDiv.style.animation = `2s levare ease-in, ${velocidadeDaBatida}s 2s compasso${tipoDeCompasso} linear infinite`;
+    animacaoDiv.style.animation = `2s levare ease-in, ${velocidadeDaBatida}s 2s compasso${tipoDeCompasso} linear infinite`;
 }
 
 function voltarParaMenu() {
@@ -61,7 +60,7 @@ function voltarParaMenu() {
     // coloca o display do menu.
     section.style.display = "flex";
     // retira o display do solfejo.
-    divDoSolfejo.style.display = "none";
+    containerDoSolfejo.style.display = "none";
     // remove animação.
-    containerDiv.style.animation = "";
+    animacaoDiv.style.animation = "";
 }
