@@ -6,11 +6,16 @@ const container = document.querySelector("#container");
 const containerDiv = document.querySelector("#container div");
 const divDoSolfejo = document.querySelector("body>div");
 const linhaDesenho = document.querySelectorAll(".linhaDesenho");
+const corpoDaPagina = document.querySelector("body");
 
-function start() {
+iniciar.onclick = () => {
     let tipoDeCompasso = pegarTipoDeCompasso();
     desenharCompasso(tipoDeCompasso);
     comecarAnimacao(tipoDeCompasso);
+}
+
+corpoDaPagina.onkeypress = (event) => {
+    if (event.code === "KeyF") voltarParaMenu();
 }
 
 // returna número 2 para compasso binário, 3 para compasso ternário e 4 para compasso quartenário.
@@ -51,4 +56,12 @@ function comecarAnimacao(tipoDeCompasso) {
     containerDiv.style.animation = `2s levare ease-in, ${velocidadeDaBatida}s 2s compasso${tipoDeCompasso} linear infinite`;
 }
 
-iniciar.onclick = start;
+function voltarParaMenu() {
+
+    // coloca o display do menu.
+    section.style.display = "flex";
+    // retira o display do solfejo.
+    divDoSolfejo.style.display = "none";
+    // remove animação.
+    containerDiv.style.animation = "";
+}
