@@ -35,16 +35,27 @@
         transform: translateY(20vh);
     }
     25% {
-        transform: translate(30vh, 35vh);
+        transform: translate(35vh, 25vh);
     }
     50% {
-        transform: translate(10vh, 5vh)
+        transform: translate(10vh, 5vh);
     }
     75% {
         transform: translateY(-40vh);
     }
     100% {
         transform: translateY(20vh);
+    }
+}
+@keyframes compasso2Color {
+    0% {
+        background-color: lawngreen;
+    }
+    49% {
+        background-color: lawngreen;
+    }
+    50% {
+        background-color: white;
     }
 }
 @keyframes levare {
@@ -61,6 +72,26 @@
 @keyframes levareContainer {
     0% {
         transform: translateX(-40vh);
+    }
+    50% {
+        transform: translateX(0vh);
+    }
+}
+
+@keyframes levare2 {
+    0% {
+        transform: translateY(20vh);
+    }
+    50% {
+        transform: translateY(-40vh);
+    }
+    100% {
+        transform: translateY(20vh);
+    }
+}
+@keyframes levareContainer2 {
+    0% {
+        transform: translateX(-20vh);
     }
     50% {
         transform: translateX(0vh);
